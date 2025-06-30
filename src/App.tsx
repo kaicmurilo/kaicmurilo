@@ -9,21 +9,12 @@ export default function App() {
   return (
     <div className="container">
       <header className="header">
-        <button className="link">Brazil</button>
-        <button className="link">Light mode</button>
+
         <nav className="nav">
           <a className="navLink" onClick={() => setIsAboutModalOpen(true)}>
             About
           </a>
-          {/* <a href="/blog" className="navLink">
-          Blog
-        </a>
-        <a href="/experiments" className="navLink">
-          Experiments
-        </a>
-        <a href="/utilities" className="navLink">
-          Utilities
-        </a> */}
+          {/* <button className="link">Light mode</button> */}
         </nav>
       </header>
 
@@ -42,12 +33,12 @@ export default function App() {
 
       <footer className="footer">
         <div className="posts">
-          <a href="/posts/starting" className="postLink">
+          {/* <a href="/posts/starting" className="postLink">
             🚀 Starting… →
           </a>
           <a href="/posts/first-contact" className="postLink">
             💻 History →
-          </a>
+          </a> */}
           <a
             href="https://www.linkedin.com/in/kaic-murilo-nunes-461238112/"
             target="_blank"
