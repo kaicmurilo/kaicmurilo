@@ -1,38 +1,113 @@
-.App {
+/* src/App.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 2rem;
+  background: #111;
+  color: #fff;
+  font-family: monospace;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.nav {
+  justify-self: end;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.main {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.subtitle {
+  font-size: 0.875rem;
+  text-transform: lowercase;
+  margin-bottom: 1rem;
+  color: #9ca3af;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.bio {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.highlight {
+  color: #38bdf8;
+}
+
+.hint {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.kbd {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  font-size: 0.875rem;
 }
 
-.App-link {
-  color: #61dafb;
+.posts {
+  display: flex;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.postLink {
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
 }
+
+.postLink:hover {
+  background: #222;
+}
+
+.contact {
+  text-align: right;
+}
+

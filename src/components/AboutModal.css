@@ -1,0 +1,26 @@
+/* src/components/AboutModal.module.css */
+.overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex; justify-content: center; align-items: center;
+  }
+  
+  .modal {
+    background: #222;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    position: relative;
+    font-family: monospace;
+  }
+  
+  .close {
+    position: absolute;
+    top: 0.5rem; right: 0.5rem;
+    background: none; border: none;
+    color: #999; font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
