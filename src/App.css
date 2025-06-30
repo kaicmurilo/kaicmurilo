@@ -1,22 +1,24 @@
-/* src/App.module.css */
+/* src/App.css */
+
+/* Container */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
   padding: 2rem;
   background: #111;
   color: #fff;
   font-family: monospace;
 }
 
+/* Header */
 .header {
   display: grid;
-  grid-template-columns: auto auto 1fr;
+  grid-template-columns: auto auto auto 1fr;
   align-items: center;
   gap: 1rem;
 }
-
 .link {
   background: none;
   border: none;
@@ -25,89 +27,94 @@
   cursor: pointer;
   font-size: 0.875rem;
 }
-
 .nav {
-  justify-self: end;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
-
 .navLink {
-  color: inherit;
+  background: none;
+  border: none;
+  color: #9ca3af;
   text-decoration: none;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 
-.navLink:hover {
-  text-decoration: underline;
-}
-
+/* Main */
 .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
-.subtitle {
-  font-size: 0.875rem;
-  text-transform: lowercase;
-  margin-bottom: 1rem;
-  color: #9ca3af;
-}
-
 .title {
   font-size: 4rem;
-  font-weight: bold;
-  margin: 0;
   line-height: 1;
+  margin: 0;
 }
-
 .bio {
+  margin-top: 0.5rem;
   font-size: 1.25rem;
-  margin: 0.5rem 0;
 }
-
 .highlight {
   color: #38bdf8;
 }
 
-.hint {
+/* Footer */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
   margin-top: 2rem;
   font-size: 0.875rem;
-  color: #6b7280;
 }
-
-.kbd {
-  background: #222;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 0.2rem 0.4rem;
-}
-
-.footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 2rem;
-  font-size: 0.875rem;
-}
-
 .posts {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
-
 .postLink {
   padding: 0.5rem 1rem;
   border: 1px solid #333;
   border-radius: 4px;
   text-decoration: none;
   color: inherit;
+  white-space: nowrap;
 }
-
-.postLink:hover {
-  background: #222;
-}
-
 .contact {
   text-align: right;
+  flex-shrink: 0;
 }
 
+/* Responsive */
+@media (max-width: 640px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+  .link {
+    font-size: 0.75rem;
+  }
+
+  .main {
+    padding: 1rem 0;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .bio {
+    font-size: 1rem;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact {
+    text-align: center;
+  }
+}
