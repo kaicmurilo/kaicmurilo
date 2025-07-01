@@ -1,20 +1,38 @@
-// src/App.tsx
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import AboutModal from "./components/AboutModal";
 
 export default function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+    }
+  }, []);
+
+  useEffect(() => {
+    document.body.className = isDarkMode ? 'dark-theme' : 'light-theme';
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
     <div className="container">
       <header className="header">
-
         <nav className="nav">
           <a className="navLink" onClick={() => setIsAboutModalOpen(true)}>
             About
           </a>
-          {/* <button className="link">Light mode</button> */}
+          <button className="themeToggle" onClick={toggleTheme}>
+            {isDarkMode ? '☀️' : '🌙'}
+          </button>
         </nav>
       </header>
 
